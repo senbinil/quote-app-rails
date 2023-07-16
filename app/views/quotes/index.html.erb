@@ -1,0 +1,14 @@
+<main class="container p-5">
+  <%= turbo_frame_tag "first_turbo_tag" do %>
+  <div class="header d-flex justify-co
+  ntent-between align-items-center">
+    <h1>Quotes</h1>
+    <%= link_to "New Quote", new_quote_path, data: { turbo_frame: dom_id(Quote.new) }, class: "btn btn-primary" %>
+  </div>
+  <% end %>
+  <hr />
+  <%= turbo_frame_tag Quote.new %>
+  <%= turbo_frame_tag "quotes" do %>
+    <%= render @quotes %>
+  <% end %>
+</main>

@@ -1,0 +1,10 @@
+<main class="container p-5">
+<div class="my-2 d-flex align-items-center justify-content-between">
+    <%= link_to sanitize("&larr; Back to quotes"), quotes_path, class: "btn btn-primary" %>
+    <h1>New Quote</h1>
+  </div>
+  <hr/>
+  <%= turbo_frame_tag @quote do %>
+    <%= render "form", quote: @quote %>
+  <% end %>
+</main>

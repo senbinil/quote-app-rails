@@ -1,0 +1,7 @@
+<main class="container p-5">
+  <%= link_to sanitize("&larr; Back to quotes"), quotes_path, class: "btn btn-primary" %>
+
+  <div class="my-4 p-4 card shadow text-center fs-3">
+    <h1><u> <%= @quote.name %> </u></h1>
+  </div>
+</main>

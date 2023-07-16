@@ -1,0 +1,17 @@
+<%= form_with model: quote, html: { class: "p-4" } do |f| %>
+  <% if quote.errors.any? %>
+   <div class="my-2 alert alert-danger">
+    <%= quote.errors.full_messages.to_sentence.capitalize %>
+   </div>
+  <% end %>
+
+ <div class="d-flex gap-2 align-items-center justify-content-between">
+  <div class="form-floating my-3 w-100">
+      <%= f.text_field :name, input_html: { autofocus: true }, class: "form-control" %>
+      <label class="form-control-label">Quote</label>
+    </div>
+    <%= link_to "Cancel", quotes_path, class: "btn btn-danger" %>
+    <%= f.submit class: "btn btn-primary" %>
+ </div>
+  
+<% end %>

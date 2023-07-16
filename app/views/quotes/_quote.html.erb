@@ -1,0 +1,9 @@
+<%= turbo_frame_tag quote do %>
+  <div class="card shadow  mb-2 p-4">
+    <%= link_to quote.name, quote_path(quote), data: { turbo_frame: "_top" }, class: "fs-3 text-decoration-none" %>
+    <div class="d-flex justify-content-end gap-2">
+      <%= button_to "Delete", quote_path(quote), method: :delete, class: "btn btn-danger" %>
+      <%= link_to "Edit", edit_quote_path(quote), class: "btn btn-primary btn" %>
+    </div>
+  </div>
+<% end %>
