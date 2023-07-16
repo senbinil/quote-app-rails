@@ -1,4 +1,4 @@
-# README
+# Quote Rails
 
 Quote App using Turbo Rails
 
